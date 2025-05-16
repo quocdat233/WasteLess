@@ -1,0 +1,57 @@
+
+
+  <div id="auth-form-wrapper">
+  <div class="form container" id="container">
+    <div class="form-container sign-up">
+      <span class="close-form" onclick="closeForm()">✖</span>
+      <form>
+        <h1>Đăng kí</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>hoặc sử dụng Email mật khẩu</span>
+        <input type="text" placeholder="Họ và tên">
+        <input type="email" placeholder="Email">
+        <input id="signup-password" type="password" placeholder="Mật khẩu">
+        <i id="signup-eye-toggle" class="fa-solid fa-eye-slash regit" onclick="togglePasswordVisibility('signup')"></i>
+        <button>Đăng kí</button>
+      </form>
+    </div>
+    <div class="form-container sign-in">
+
+      <form>
+        <h1>Đăng nhập</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>hoặc sử dụng Email mật khẩu</span>
+        <input type="email" placeholder="Email">
+        <input id="signin-password" type="password" placeholder="Mật khẩu">
+        <i id="signin-eye-toggle" class="fa-solid fa-eye-slash" onclick="togglePasswordVisibility('signin')"></i>
+        <a class="Forgot-password" href="#">Quên mật khẩu?</a>
+        <button id="loginButton">Đăng nhập</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>Xin chào!</h1>
+          <p>Hãy cùng Waste Less tạo nên một môi trường không rác thải ♻️</p>
+
+          <button class="hidden" id="login">Đăng nhập</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <span class="close-form" onclick="closeForm()">✖</span>
+          <h1>Chào mừng trở lại!</h1>
+          <p>Đăng nhập để tiếp tục bảo vệ hành tinh của chúng ta 🌍</p>
+          <button class="hidden" id="register">Đăng kí</button>
+        </div>
+      </div>
+    </div>
+  </div></div>

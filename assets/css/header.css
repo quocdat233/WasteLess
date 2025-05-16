@@ -90,14 +90,17 @@ header .inner-menu li a {
     transition: width 0.4s ease;
 }
 
+
 .inner-menu ul li a:hover::after,
 .inner-menu ul li a.active::after {
     width: 100%;
 }
-
-header .inner-menu ul li a:hover {
-    color: rgb(38, 208, 47);
+.inner-menu ul li a.active {
+    color: #31cd41;
 }
+
+
+
 
 .inner-search {
     position: relative;
@@ -146,23 +149,241 @@ header .inner-menu ul li a:hover {
 
 }
 
+/* Các style hiện tại giữ nguyên... */
 
-@media(max-width:991.18px) {
-    header .inner-menu {
-        display: none;
-    }
-
-    .header .inner-icon-mobi {
-        display: block;
-        font-size: 25px;
-        color: #8e8585;
-    }
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+  header .inner-main {
+    padding: 12px 25px;
+  }
+  
+  header .inner-menu ul li {
+    margin-right: 25px;
+  }
+  
+  .inner-search {
+    width: 65px;
+  }
+  
+  .search-input:focus {
+    width: 160px;
+  }
 }
 
-@media(max-width:575.98) {
-    .header .inner-icon-mobi {
-        display: block;
-        font-size: 25px;
-    }
+@media (max-width: 991.98px) {
+  header .inner-main {
+    padding: 10px 20px;
+    border-radius: 40px;
+  }
+  .container{
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+    max-width: 93%;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  
+  .inner-logo img {
+    height: 38px;
+  }
+  
+  .inner-logo span {
+    display: none;
+  }
+  
+  
+  .search-input:focus {
+    width: 130px;
+  }
+
+ 
+}
+
+@media (max-width: 879.98px) {
+  header {
+    top: 15px;
+  }
+  .container{
+    max-width: 92%;
+  }
+  header .inner-main {
+    padding: 8px 20px;
+    border-radius: 35px;
+  }
+  .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .search-input:focus {
+    width: 150px;
+  }
+
+   
+header .inner-menu {
+    position: fixed;
+    top: 10px;
+    border-radius:0 40px 0 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(57, 114, 21, 0.99);
+    z-index: 99;
+    padding: 60px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  header .inner-menu.active {
+    right: 0;
+  }
+  
+  
+  header .inner-menu ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+
+
+
+
+
+
+
+  }
+  
+  header .inner-menu ul li {
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+   header .inner-menu li a {
+    padding: 10px 0;
+    display: block;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+    .menu-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+   body.menu-open {
+    overflow: hidden;
+  }
+  
+  .header .inner-icon-mobi {
+    display: block;
+    color: white;
+  }
+  .header .inner-icon-mobi i{
+    font-size: 28px;
+  }
+  
+  .inner-logo img {
+    height: 35px;
+  }
+  
+  .inner-logo span {
+    display: block;
+    font-size: 20px;
+  }
+   .header .inner-icon-mobi {
+    padding-top: 2px;
+  }
+
+
+  
+}
+
+@media (max-width: 575.98px) {
+  header {
+    top: 23px;
+  }
+  
+  header .inner-main {
+    padding: 8px 17px;
+    border-radius: 30px;
+  }
+  
+  .inner-logo img {
+    height: 35px !important;
+  }
+  
+  .inner-logo span {
+    font-size: 18px;
+  }
+  
+  .header .inner-icon-mobi {
+    padding-top: 2px;
+  }
+  
+  
+  
+  
+  .search-input:focus {
+    width: 120px;
+  }
+  
 
 }
+
+@media (max-width: 400px) {
+  .inner-logo span {
+    display: none;
+  }
+  .container {
+    max-width: 85%;
+  }
+  .inner-main{
+    padding: 7px 17px !important;
+  }
+  
+  .search-input:focus {
+    width: 120px;
+  }
+}
+
+/* Animation for mobile menu */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Mobile Menu Styles */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+

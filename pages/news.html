@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/form.css">
+  <link rel="stylesheet" href="../assets/css/pagesCSS/news.css">
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  <script src="../layout/header.js" defer> </script>
+  <script src="../layout/footer.js" defer></script>
+
+  <title>Waste Less - Hợp Tác</title>
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+  <script src="../assets/js/news.js" defer></script>
+
+</head>
+
+<body>
+  <div class="header"></div>
+  
+   <div id="auth-form-container"></div>
+  <div class="section-one">
+     <div class=" c-4">
+            <ul class="container-register pt-1">
+              <li><a href="#" id="header-login" onclick="openForm()">Đăng nhập</a></li>
+              <li>|</li>
+              <li><a href="#" id="header-register" onclick="openForm()">Đăng kí </a>
+              </li>
+            </ul>
+
+          </div>
+    <div class="container">
+      <div class="inner-wrap">
+        
+        <div class="inner-content ">
+          <div class="text-content"  data-aos="fade-up"  data-aos-duration="800" >
+            <h1><b>Hợp tác & đồng hành <br> cùng Waste Less</b></h1>
+          </div>
+        <div class="button-content" data-aos="fade-up" data-aos-duration="1100">
+  <a href="#tai-tro" class="btn btn-success mr-2">Tài trợ</a>
+  <a href="#tro-thanh-dai-su" class="btn btn-primary mr-2">Trở thành đại sứ</a>
+  <a href="#hop-tac" class="btn btn-info">Hợp tác</a>
+</div>
+        </div>
+       
+        <div class="inner-img">
+          <img src="../assets/images/hoptac.avif">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-two" id="tai-tro">
+    <div class="container">
+      <div class="inner-wrap "  data-aos="fade-up" >
+
+        <div class="inner-text">
+          <h1><b>Tài trợ cho các dự án<br>giảm thiểu rác thải</b></h1>
+          <p>
+            Chúng tôi kêu gọi sự đồng hành và hỗ trợ từ các tổ chức, doanh nghiệp và cá nhân cùng chung tay xây dựng một
+            lối sống bền vững, thông qua các dự án giảm thiểu rác thải và tái chế.
+            Mỗi đóng góp của bạn sẽ không chỉ góp phần giảm gánh nặng rác thải lên môi trường, mà còn tạo ra những giải
+            pháp thiết thực: từ các điểm thu gom rác hiệu quả, sản phẩm thay thế nhựa dùng một lần, đến việc lan tỏa lối
+            sống xanh đến cộng đồng.
+          </p>
+          <p>
+            Cùng nhau, chúng ta có thể kiến tạo một tương lai xanh – nơi con người sống hài hòa với thiên nhiên, và phát
+            triển bền vững không còn là lựa chọn, mà là hành động thiết yếu.
+          </p>
+        </div>
+
+        <div class="inner-qrcode">
+          <div class="bank-info">
+            <p><strong>Ngân hàng MBank</strong></p>
+            <p>Số tài khoản: <strong>23368886666888</strong></p>
+            <p>Tên tài khoản: <span class="green">CONG TY TNHH WASTE LESS</span></p>
+          </div>
+           <div class="input-section">
+            <label for="amount">Nhập số tiền:</label>
+            <input type="number" id="amount" placeholder="VD: 100000">
+            <button onclick="generateQRCode()">Tạo QR</button>
+        </div>
+          <div class="qr-code qr-section">
+            <img src="../assets/images/qr.jpg"  id="qrCode" alt="QR Code">
+          </div>
+          <div class="info">
+            <hr>
+            <p> Toàn bộ thông tin sao kê được bố cáo minh bạch tại App Thiện nguyện:</p>
+            <button class="detail-button">Xem chi tiết sao kê</button>
+            <hr>
+            <p>Doanh nghiệp và các Tổ chức quan tâm hỗ trợ cho các dự án có thể liên hệ tới chúng tôi theo:</p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <img src="../assets/images/email-svgrepo-com.svg" alt="Email Icon" />
+                <a href="mailto:gieomamxanhtoancau@gmail.com">wastelessgroup@gmail.com</a>
+              </div>
+
+              <div class="contact-item">
+                <img src="../assets/images/phone-rounded-svgrepo-com.svg" alt="Phone Icon" />
+                <a href="tel:0981986397">0999999999</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-three" id="tro-thanh-dai-su">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="inner-content">
+          <div class="inner-text">
+            <h1>Trở thành Đại sứ Dự án</h1>
+            <p>Nếu bạn trân trọng và biết ơn sự sống, mong muốn đóng góp công sức của mình để phụng sự và phát triển
+              cộng đồng, hãy cùng chúng tôi trở thành Đại sứ Môi trường Xanh
+              <br><strong>Bạn có thể đồng hành qua nhiều hình thức:</strong>
+            </p>
+          </div>
+          <div class="inner-join">
+            <p>Hãy cùng chúng tôi gieo mầm hy vọng, gieo mầm sự sống, và lan toả màu xanh đến mọi miền đất nước.</p>
+            <button class="join-button">Đăng ký tham gia</button>
+            <div class="inner-join-img">
+              <img src="../assets/images/daisu.avif">
+            </div>
+
+          </div>
+        </div>
+        <div class="inner-list">
+          <div class="reason">
+            <h2><span>01</span> Tham gia điều hành dự án WasteLess tại địa phương bạn sinh sống</h2>
+            <p>Trở thành người tiên phong điều phối các hoạt động giảm rác thải, tái chế và tuyên truyền sống xanh tại
+              chính khu vực bạn đang sống. Cùng xây dựng mô hình WasteLess gắn liền với cộng đồng địa phương.</p>
+          </div>
+          <div class="reason">
+            <h2><span>02</span> Kết nối với cơ quan nhà nước</h2>
+            <p>Hợp tác với các cơ quan chức năng để xây dựng kế hoạch quản lý rác thải, triển khai điểm thu gom tái chế,
+              và phát động chiến dịch nâng cao ý thức bảo vệ môi trường.</p>
+          </div>
+          <div class="reason">
+            <h2><span>03</span> Kết nối các doanh nghiệp</h2>
+            <p>Tìm kiếm sự đồng hành của các công ty trong việc tài trợ sản phẩm thân thiện môi trường, hỗ trợ các hoạt
+              động tái chế, hoặc triển khai mô hình “văn phòng không rác thải”.</p>
+          </div>
+          <div class="reason">
+            <h2><span>04</span> Kết nối với cộng đồng địa phương</h2>
+            <p>Hợp tác với người dân để tổ chức các chương trình phân loại rác tại nguồn, trao đổi vật phẩm tái sử dụng,
+              hoặc chuyển đổi rác thành tài nguyên có ích.</p>
+          </div>
+          <div class="reason">
+            <h2><span>05</span> Kết nối và truyền thông</h2>
+            <p>Tìm kiếm và kết nối với các doanh nghiệp để tạo nguồn tài chính bền vững cho các dự án trồng cây, trồng
+              rừng.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <div class="section-four" id="hop-tac">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="inner-text">
+          <h2>Hợp tác cùng<br>WasteLess Group</h2>
+          <p>
+            Doanh nghiệp và các Tổ chức quan tâm hỗ trợ cho các dự án trồng cây của Gieo Mầm Xanh Toàn Cầu
+            (tài trợ hoặc cung cấp nguồn cây giống hoặc phối hợp cùng triển khai các dự án trồng cây...)
+            có thể liên hệ tới chúng tôi theo:
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <img src="../assets/images/email-svgrepo-com.svg" alt="Email Icon" />
+              <a href="mailto:wastelessgroup@gmail.com">wastelessgroup@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <img src="../assets/images/phone-rounded-svgrepo-com.svg" alt="Phone Icon" />
+              <a href="tel:0999999999">0999999999</a>
+            </div>
+          </div>
+        </div>
+<div class="inner-img-wrapper">
+        <div class="inner-img" data-aos="fade-up" >
+          <img src="../assets/images/gieomam.avif" alt="Hình ảnh rác thải">
+        </div>
+        <div class="overlay-box"></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="footer"></div>
+ 
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+  
+    AOS.init();
+  </script>
+  <script>
+    fetch('../layout/login.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('auth-form-container').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = '../assets/js/index.js';
+        document.body.appendChild(script);
+      });
+  </script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".section-three .inner-text", {
+    scrollTrigger: {
+      trigger: ".section-three .inner-text",
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".section-three .inner-join", {
+    scrollTrigger: {
+      trigger: ".section-three .inner-join",
+      start: "top 80%",
+    },
+    y: 80,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out"
+  });
+
+  gsap.utils.toArray(".section-three .reason").forEach((el, index) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 98%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.9,
+      delay: index * 0.08,
+      ease: "power2.out"
+    });
+  });
+</script>
+
+
+</body>
+
+</html>

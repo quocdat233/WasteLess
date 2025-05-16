@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/pagesCSS/contact.css" />
+
+  <script src="../layout/header.js" defer></script>
+  <script src="../layout/footer.js" defer></script>
+
+  <title>Waste Less - Liên hệ</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+</head>
+
+<body>
+  <div class="header"></div>
+
+  <div class="section-contact-banner">
+    <div class="container text-center pt-5 pb-5">
+      <h1>Liên hệ với chúng tôi</h1>
+      <p>Chúng tôi luôn sẵn sàng lắng nghe bạn để cùng tạo nên một tương lai xanh hơn 🌱</p>
+    </div>
+  </div>
+
+  <div class="section-contact-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="contactForm" novalidate>
+            <div class="success-message" id="successMessage">
+              Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.
+            </div>
+
+            <div class="form-group">
+              <label for="name">Họ và tên *</label>
+              <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" required>
+              <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email liên hệ *</label>
+              <input type="email" class="form-control" id="email" placeholder="Email của bạn" required>
+              <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nội dung *</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Nhập lời nhắn..." required></textarea>
+              <div class="error-message" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Gửi liên hệ</button>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <div class="contact-info">
+            <h4>Thông tin liên hệ</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              123 Đường Xanh, TP. Đà Nẵng
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              contact@wasteless.vn
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              0123 456 789
+            </p>
+            <p>
+              <i class="fas fa-clock"></i>
+              8:00 - 17:00 (T2 - T6)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-phone">
+    <div class="contact-wrapper">
+      <div class="contact-button" onclick="toggleMenu()">
+        <div class="pulse-ring"></div>
+        <i class="fas fa-comments"></i>
+      </div>
+      <div class="radial-menu" id="contactIcons">
+        <a href="tel:0123456789" target="_blank" class="contact-icon phone">
+          <img src="../assets/images/icons8-call-48.png" style="width: 28px; height: 28px" alt="" />
+        </a>
+        <a href="" target="_blank" class="contact-icon instagram">
+          <img src="../assets/images/icons8-instagram-48.png" style="width: 28px; height: 28px" alt="" />
+        </a>
+        <a href="https://zalo.me/0123456789" target="_blank" class="contact-icon zalo">
+          <img src="../assets/images/icons8-zalo-48.png" style="width: 28px; height: 28px" alt="" />
+        </a>
+        <a href="https://facebook.com/wasteless" target="_blank" class="contact-icon facebook">
+          <img src="../assets/images/icons8-fb-48.png" style="width: 28px; height: 28px" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"></div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Reset previous errors
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+      document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
+
+      let isValid = true;
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+
+      // Validate name
+      if (!name.value.trim()) {
+        document.getElementById('nameError').textContent = 'Vui lòng nhập họ và tên';
+        name.classList.add('error');
+        isValid = false;
+      }
+
+      // Validate email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim()) {
+        document.getElementById('emailError').textContent = 'Vui lòng nhập email';
+        email.classList.add('error');
+        isValid = false;
+      } else if (!emailRegex.test(email.value)) {
+        document.getElementById('emailError').textContent = 'Email không hợp lệ';
+        email.classList.add('error');
+        isValid = false;
+      }
+
+      // Validate message
+      if (!message.value.trim()) {
+        document.getElementById('messageError').textContent = 'Vui lòng nhập nội dung';
+        message.classList.add('error');
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Show success message
+        document.getElementById('successMessage').classList.add('show');
+
+        // Reset form
+        this.reset();
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          document.getElementById('successMessage').classList.remove('show');
+        }, 5000);
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+</body>
+
+</html>
