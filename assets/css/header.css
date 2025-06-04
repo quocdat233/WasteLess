@@ -34,7 +34,7 @@ justify-content: center;
 }
 
 .header__topbar {
-    background-color: #48a053;
+    background-color: #2c4f18;
     transition: all 0.3s ease;
 }
 
@@ -74,7 +74,9 @@ justify-content: center;
 }
 
 .header__nav {
-    background: linear-gradient(30deg, rgba(22, 42, 10), rgba(23, 44, 8));
+    background: linear-gradient(90deg, rgb(58, 81, 45), rgb(75, 142, 27));
+    background-color: #2c4f18;
+
     position: fixed;
     top: 34px;
     left: 0;
