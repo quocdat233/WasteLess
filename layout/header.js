@@ -151,6 +151,38 @@ AOS.init();
 
 
 
+const mobileMenuBtn = document.querySelector('.inner-icon-mobi i');
+const mobileMenu = document.querySelector('.header__menu');
+const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+const menuClose = document.getElementById('menu_close');
+
+// Mở menu mobile
+mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.add('active');
+    mobileMenuOverlay.classList.add('active');
+});
+
+// Đóng menu mobile khi click overlay
+mobileMenuOverlay.addEventListener('click', function() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+});
+
+// Đóng menu mobile khi click nút đóng
+menuClose.addEventListener('click', function() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+});
+
+// Đóng menu khi click menu item (nếu cần)
+const menuItems = document.querySelectorAll('.header__menu__body--content ul li a');
+menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+    });
+});
+
 
 
 

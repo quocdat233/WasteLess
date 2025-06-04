@@ -1,24 +1,25 @@
 /* Chatbot Container */
 .chatbot-container {
   position: fixed;
-  bottom: 100px;
-  right: 30px;
+  bottom: 120px;
+  right: 40px;
   width: 350px;
   height: 450px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  display: flex;
+  display: none;
   flex-direction: column;
   overflow: hidden;
-  transform: translateY(20px);
+  transform: translateY(50px);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
   z-index: 1001;
 }
 
 .chatbot-container.active {
+   display: flex;
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
@@ -227,4 +228,18 @@
 
 .contact-icon img {
   animation: tilt-pause 1.2s ease-in-out infinite;
+}
+
+#chatbot-wrapper {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+#chatbot-wrapper.active {
+  opacity: 1;
+  visibility: visible;
 }

@@ -16,8 +16,8 @@
 
 
 .section-one .inner-wrap {
-  margin-top:  130px;
-    max-width: 40%;
+  margin-top:  170px;
+    max-width: 48%;
     color: white;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
     padding: 30px;
@@ -56,7 +56,7 @@
 }
 
 .section-one .inner-button{
-  padding-top: 50px;
+  padding-top: 60px !important;
   padding-bottom: 2px;
   display: flex;
     gap: 30px;
@@ -65,119 +65,27 @@
 
 }
 .section-one .button-two {
-   background: -webkit-linear-gradient(30deg, rgba(81, 146, 41, 0.8), rgba(108, 169, 65, 0.7));
-    border: 1px solid tratra;
+   background: -webkit-linear-gradient(30deg, rgba(104, 196, 43, 0.9), rgba(88, 164, 38, 0.9));
+    border: 1px solid transparent;
 
 }
 
 .section-one .button-two:hover {
-    background-color: #fff;
+    background: -webkit-linear-gradient(30deg, rgba(57, 116, 18, 0.9), rgba(88, 164, 38, 0.9));
+
+    
 
 }
 
 .section-one .button-two-outline {
-  border: 1px solid #f6f0f0;
-    background: transparent;
-    color: #fff;
+  background: -webkit-linear-gradient(30deg, rgba(104, 196, 43, 0.9), rgba(88, 164, 38, 0.9));
+    border: 1px solid transparent;
 }
 
 .section-one .button-two-outline:hover {
-   background: -webkit-linear-gradient(30deg, rgba(81, 146, 41, 0.8), rgba(108, 169, 65, 0.7));
-         color: rgb(38, 37, 37);
-    border: 0px solid #000;
+    background: -webkit-linear-gradient(30deg, rgba(59, 110, 25, 0.9), rgba(88, 164, 38, 0.9));
 
 
-
-}
-/* Màn hình nhỏ hơn 1200px (Desktop nhỏ hơn hoặc Laptop) */
-@media (max-width: 1200px) {
-  .section-one .inner-wrap {
-      max-width: 60%; /* Tăng max-width để phù hợp */
-      padding: 20px;
-  }
-
-  .section-one .inner-wrap h1 {
-      font-size: 40px; /* Giảm font-size nhẹ */
-      line-height: 1.3;
-  }
-
-  .section-one .container-register {
-      right: 15px; /* Giảm khoảng cách phải */
-      font-size: 13px; /* Giảm font-size nhẹ */
-      gap: 8px;
-  }
-}
-
-/* Màn hình nhỏ hơn 768px (Tablet) */
-@media (max-width: 768px) {
-  .section-one {
-      background-attachment: scroll; /* Tắt fixed trên mobile */
-      padding: 0 10px;
-  }
-
-  .section-one .inner-wrap {
-      max-width: 80%;
-      margin-top: 80px; /* Giảm margin-top */
-      padding: 15px;
-      text-align: center; /* Căn giữa văn bản */
-  }
-
-  .section-one .inner-wrap h1 {
-      font-size: 32px;
-      line-height: 1.2;
-  }
-
-  .section-one .container-register {
-      top: 10px;
-      right: 10px;
-      font-size: 12px;
-      gap: 6px;
-  }
-}
-
-/* Màn hình nhỏ hơn 576px (Mobile lớn) */
-@media (max-width: 576px) {
-  .section-one .inner-wrap {
-      max-width: 90%;
-      margin-top: 50px;
-      padding: 10px;
-  }
-
-  .section-one .inner-wrap h1 {
-      font-size: 28px;
-  }
-
-  .section-one .container-register {
-      font-size: 11px;
-      gap: 5px;
-  }
-}
-
-/* Màn hình nhỏ hơn 400px (Mobile nhỏ) */
-@media (max-width: 400px) {
-  .section-one .inner-wrap {
-      max-width: 100%;
-      margin-top: 30px;
-      padding: 8px;
-  }
-
-  .section-one .inner-wrap h1 {
-      font-size: 24px;
-      line-height: 1.1;
-  }
-
-  .section-one .container-register {
-      top: 5px;
-      right: 5px;
-      font-size: 10px;
-      gap: 4px;
-  }
-
-  .section-one .c-4 {
-      width: 100%;
-      display: flex;
-      justify-content: center; /* Căn giữa menu */
-  }
 }
 
 /* END SECTION-ONE  */
@@ -917,78 +825,6 @@ i.regit {
   left: 100%;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media screen and (max-width: 992px) {
-  .section-three .timeline::before {
-    left: 40px;
-  }
-  
-  .section-three .timeline-item {
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
-  }
-  
- .section-three .timeline-item:nth-child(even) {
-    left: 0;
-  }
-  
-  .section-three .timeline-item::after {
-    left: 28px;
-  }
-  
-  .section-three .timeline-item:nth-child(odd)::after,
-  .section-three .timeline-item:nth-child(even)::after {
-    left: 28px;
-  }
-  
-  .section-three .timeline-icon {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 2rem;
-  }
-  
-  .section-three .timeline-content {
-    height: auto;
-    min-height: 200px;
-  }
-  
-  .section-three .card-front, .card-back {
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .section-three .section-three {
-    padding: 3rem 0;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  
-  .section-three .timeline-item {
-    padding-left: 70px;
-    margin-bottom: 30px;
-  }
-  
-  .section-three .timeline-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-  
-  .section-three .carousel-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
-  }
-}
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
@@ -1622,4 +1458,200 @@ i.regit {
   height: 3px;
   background-color: #89c389;
 }
+/* Extra large devices (max-width: 1199.98px) */
+@media (max-width: 1199.98px) {
+  .section-one .inner-wrap {
+    max-width: 50%;
+  }
 
+  .section-one .inner-wrap h1 {
+    line-height: 1.3;
+  }
+ .section-one .button {
+    padding: 10px 28px ; /* Smaller button size */
+    font-size: 15px;
+  }
+  .section-one .inner-button{
+    gap: 39px;
+  }
+
+  
+
+@media (max-width: 991.98px) {
+  .section-one .inner-wrap {
+    max-width: 60%; /* Further increase width */
+    margin-top: 160px; /* Reduce top margin */
+    padding: 10px;
+  }
+
+  .section-one .inner-wrap h1 {
+    font-size: 45px; /* Smaller font size */
+    line-height: 1.2;
+  }
+
+  .section-one .inner-button {
+    padding-top: 30px;
+    gap: 20px; /* Reduce gap */
+    padding-left: 20px;
+  }
+
+  .section-one .button {
+    padding: 10px 30px; /* Smaller button size */
+    font-size: 15px;
+  }
+}
+
+/* Medium devices (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+  .section-one {
+    background-attachment: scroll; /* Fixed background can be jarring on mobile */
+    padding-left: 0; /* Remove left padding */
+  }
+
+  .section-one .inner-wrap {
+    max-width: 90%; /* Use more width */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 140px;
+    padding: 15px;
+  }
+
+  .section-one .inner-wrap h1 {
+    font-size:42px; /* Smaller font for readability */
+    line-height: 1.2;
+  }
+
+  .section-one .inner-button {
+    padding-left: 9%;
+   gap: 20px;
+   align-items: center;
+   justify-content: flex-start;
+   
+  }
+
+  .section-one .button {
+    padding: 10px 15px;
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+/* Small devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .section-one {
+    height: 70vh; /* Further reduce height */
+  }
+
+  .section-one .inner-wrap {
+    max-width: 90%; /* Almost full width */
+  
+    margin-top: 120px;
+
+    padding: 10px;
+  }
+
+  .section-one .inner-wrap h1 {
+    font-size: 35px; /* Smaller font */
+    line-height: 1.3;
+  }
+
+  .section-one .inner-button {
+    padding-top: 15px;
+      padding-left: 0;
+      align-items: center;
+    gap: 15px;
+    padding-left: 50px;
+  }
+
+  .section-one .button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 469px) {
+   .section-one .inner-button {
+    padding-left: 15px;
+  }
+    .section-one .inner-wrap {
+    text-align: left;
+
+    }
+}
+@media (max-width: 417px) {
+  .section-one .inner-button {
+    padding-left: 0px;
+    margin-left: 13px !important;
+
+  }
+   .section-one .inner-wrap {
+    text-align: left;
+    max-width: 100%; /* Almost full width */
+
+
+    }
+}
+/* Extra small devices (max-width: 400px) */
+@media (max-width: 400px) {
+
+  .section-one .inner-wrap {
+    max-width: 95%;
+    text-align: left;
+
+    margin-top: 100px;
+    padding: 8px;
+  }
+
+  .section-one .inner-wrap h1 {
+    font-size: 28px; 
+    line-height: 1.2;
+  }
+
+  .section-one .inner-button {
+    padding-top: 5px;
+    gap: 8px;
+    padding-left: 12px;
+  }
+
+  .section-one .button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+/* Very small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .section-one {
+    height: 60vh; /* Minimal height */
+  }
+
+  .section-one .inner-wrap {
+    max-width: 100%; /* Full width */
+    margin-top: 90px;
+    padding: 5px;
+  }
+
+  .section-one .inner-wrap h1 {
+    font-size: 22px; /* Smallest font size */
+    line-height: 1.1;
+  }
+
+  .section-one .inner-button {
+    display: flex;
+   align-items: center;
+   flex-direction: column;
+    padding-top: 8px;
+    gap: 15px;
+    padding-left: 0px;
+    margin: 0 !important;
+  }
+  .button-two-outline {
+    padding-right: 45px !important;
+    padding-left: 45px !important;
+  }
+
+  .section-one .button {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
