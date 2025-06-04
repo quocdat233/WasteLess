@@ -41,18 +41,24 @@ footer.innerHTML = `
   </a>
 </li>
 <li>
+  <a href="${communityLink}" target="_self">
+    Cộng đồng
+  </a>
+</li>
+<li>
+<li>
+  <a href="${newsLink}" target="_self">
+    Xếp hạng
+  </a>
+</li>
+<li>
   <a href="${newsLink}" target="_self">
     Hợp tác
   </a>
 </li>
 
 
-<li>
-  <a href="${communityLink}" target="_self">
-    Cộng đồng
-  </a>
-</li>
-<li>
+
   <a href="${guidanceLink}" target="_self">
     Hướng dẫn
   </a>

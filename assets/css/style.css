@@ -1,35 +1,10 @@
 
 
 /* SECTION-ONE */
-.container-register {
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
-}
-.container-register li{
-  color: #fff;
-}
-.container-register a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.2s;
-}
-
-.container-register a:hover {
-  color: #5bb87c;
-}
 
 .section-one {
     position: relative;
-    background-image: url(../images/woman-1822646_1280.jpg);
+    background-image: url(../images/pexels-soo-chul-park-695483041-18161363.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,7 +45,7 @@
 }
 
 .section-one .button {
-    color: rgb(38, 37, 37);
+    color: rgb(15, 9, 9);
     padding: 14px 40px;
     display: inline-block;
     border-radius: 8px;
@@ -354,119 +329,6 @@ h1{
 /* END SECTION-RESULT */
 
 
-/* PHONE */
-.contact-wrapper {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 1000;
-  }
-  
-  .contact-button { 
-    width: 60px;
-    height: 60px;
-    background: #7bcc5b;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .pulse-ring {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(65, 211, 84, 0.4);
-    animation: pulse 1.5s infinite;
-    z-index: -1;
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.8); opacity: 0; }
-  }
-  
-  .radial-menu {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    width: 5px;
-    height: 5px;
-  }
-  
-  .contact-icon {
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    background:  rgba(255, 248, 220, 0.4);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; 
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-decoration: none !important;
-
-  }
-  .contact-icon:hover i {
-    background: linear-gradient(30deg, #6ac56d, #f6f6f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .contact-icon img,
-  .contact-icon i {
-    font-size: 20px;
-    width: 21px;
-    height: 20px;
-    object-fit: contain;
-    color: #333;
-  }
-  
-  /* Khi menu active */
-  .radial-menu.active .contact-icon {
-    opacity: 1;
-  }
-  
-  .radial-menu.active .contact-icon:nth-child(1) {
-    transform: translate(-78px, 30px); 
-  }
-  
-  .radial-menu.active .contact-icon:nth-child(2) {
-    transform: translate(-75px, -30px); 
-  }
-  
-  .radial-menu.active .contact-icon:nth-child(3) {
-    transform: translate(-30px, -75px); 
-  }
-  
-  
-  .radial-menu.active .contact-icon:nth-child(4) {
-    transform: translate(30px, -78px);
-  }
-  @keyframes tilt-pause {
-    0%   { transform: rotate(0deg); }
-    10%  { transform: rotate(18deg); }
-    20%  { transform: rotate(-15deg); }
-    30%  { transform: rotate(5deg); }
-    40%  { transform: rotate(-9deg); }
-    50%  { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); } /* giữ nguyên trong 1s còn lại */
-  }
-  
-  .contact-icon img {
-    animation: tilt-pause 1.2s ease-in-out infinite;
-  }
-  
-  
-/* END PHONEPHONE */
 
 
 /* FORM */
@@ -1193,14 +1055,12 @@ i.regit {
 .right-aligned { flex-direction: row-reverse; }
 
 .card-image {
-  flex: 1;
-  min-height: 350px;
   overflow: hidden;
 }
 
 .card-image img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 340px;
   object-fit: cover;
   transition: transform 1s;
 }
@@ -1219,19 +1079,18 @@ i.regit {
 }
 
 .problem-tag {
-  display: inline-block;
-  background: #ff6b6b;
+  background: #6bce64;
   color: white;
   padding: 0.3rem 1rem;
   border-radius: 50px;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   font-size: 0.9rem;
 }
 
 /* Solution Box (Glassmorphism) */
 .solution-box {
-  background: rgba(40, 167, 69, 0.85);
+  background: linear-gradient(rgba(112, 146, 97, 0.6), rgba(54, 53, 53, 0.6));
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 4rem;
@@ -1243,7 +1102,7 @@ i.regit {
 }
 
 .solution-icon {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1255,7 +1114,7 @@ i.regit {
 }
 
 .solution-item {
-  background: rgba(255,255,255,0.15);
+  background: rgba(32, 119, 21, 0.4);
   padding: 2rem 1rem;
   border-radius: 15px;
   transition: all 0.3s;

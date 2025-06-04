@@ -1,181 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/form.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/css/reset.css" />
-  <link rel="stylesheet" href="../assets/css/base.css" />
-  <link rel="stylesheet" href="../assets/css/header.css" />
-  <link rel="stylesheet" href="../assets/css/footer.css" />
-  <link rel="stylesheet" href="../assets/css/pagesCSS/contact.css" />
 
-  <script src="../layout/header.js" defer></script>
+  <script src="../layout/header.js" defer> </script>
   <script src="../layout/footer.js" defer></script>
 
-  <title>Waste Less - Liên hệ</title>
-  <link rel="icon" href="assets/images/logo.png" type="image/png" />
-</head>
+   <title>Waste Less - Thử Thách Xanh</title>
 
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+
+  <style>
+    :root {
+      --primary-green: #28a745;
+      --secondary-green: #218838;
+      --light-green: #d4edda;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    .challenge-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      border: none;
+    }
+    
+    .challenge-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .challenge-header {
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .challenge-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    .challenge-header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: var(--primary-green);
+    }
+    
+    .badge-green {
+      background-color: var(--primary-green);
+      color: white;
+    }
+    
+    .progress {
+      height: 25px;
+      border-radius: 12px;
+    }
+    
+    .progress-bar {
+      background-color: var(--primary-green);
+    }
+    
+    .leaderboard-item {
+      transition: all 0.3s;
+      border-left: 4px solid var(--primary-green);
+    }
+    
+    .leaderboard-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .rank-1 {
+      background-color: #fff3cd;
+      border-left-color: #ffc107;
+    }
+    
+    .rank-2 {
+      background-color: #e2e3e5;
+      border-left-color: #6c757d;
+    }
+    
+    .rank-3 {
+      background-color: #f8d7da;
+      border-left-color: #dc3545;
+    }
+    
+    .challenge-icon {
+      font-size: 2rem;
+      color: var(--primary-green);
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-green);
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    }
+    
+    .btn-green {
+      background-color: var(--primary-green);
+      color: white;
+    }
+    
+    .btn-green:hover {
+      background-color: var(--secondary-green);
+      color: white;
+    }
+  </style>
+</head>
 <body>
   <div class="header"></div>
-
-  <div class="section-contact-banner">
-    <div class="container text-center pt-5 pb-5">
-      <h1>Liên hệ với chúng tôi</h1>
-      <p>Chúng tôi luôn sẵn sàng lắng nghe bạn để cùng tạo nên một tương lai xanh hơn 🌱</p>
-    </div>
-  </div>
-
-  <div class="section-contact-form">
+  <div class="challenge-section py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <form id="contactForm" novalidate>
-            <div class="success-message" id="successMessage">
-              Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Header Section -->
+          <div class="challenge-header text-center mb-5" data-aos="fade-up">
+            <h2 class="text-success font-weight-bold">THỬ THÁCH XANH</h2>
+            <p class="lead">Cùng thi đua và ghi dấu ấn trên hành trình giảm thiểu rác thải</p>
+            <img src="../assets/images/logo.png" alt="Waste Less Logo" width="100" class="mb-3">
+          </div>
+          
+          <!-- Challenge Info -->
+          <div class="row mb-5">
+            <div class="col-md-6 mb-4" data-aos="fade-right">
+              <div class="card challenge-card h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-trophy challenge-icon mr-3"></i>
+                    <h4 class="mb-0">Thử thách tháng này</h4>
+                  </div>
+                  <h3 class="text-success">"Phân loại rác thông minh"</h3>
+                  <p class="text-muted">Tham gia thử thách phân loại rác đúng cách và tích lũy điểm số để nhận những phần quà hấp dẫn.</p>
+                  
+                  <div class="mt-4">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Thời gian còn lại:</span>
+                      <strong>12 ngày 6 giờ</strong>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-4">
+                    <h5>Phần thưởng:</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="fas fa-check-circle text-success mr-2"></i> Top 1: Bộ sản phẩm xanh trị giá 1,000,000đ</li>
+                      <li><i class="fas fa-check-circle text-success mr-2"></i> Top 2-5: Voucher mua sắm 500,000đ</li>
+                      <li><i class="fas fa-check-circle text-success mr-2"></i> Top 6-20: Bình nước cá nhân</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="name">Họ và tên *</label>
-              <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" required>
-              <div class="error-message" id="nameError"></div>
+            
+            <div class="col-md-6 mb-4" data-aos="fade-left">
+              <div class="card challenge-card h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-user-check challenge-icon mr-3"></i>
+                    <h4 class="mb-0">Thành tích của bạn</h4>
+                  </div>
+                  
+                  <div class="text-center my-4">
+                    <div class="d-inline-block position-relative">
+                      <img src="../assets/images/feedback3.png" class="rounded-circle border border-success" width="120" alt="User Avatar">
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        #15 <span class="visually-hidden">rank</span>
+                      </span>
+                    </div>
+                    <h4 class="mt-3">Nguyễn Văn A</h4>
+                    <p class="text-muted">Thành viên từ tháng 3/2024</p>
+                  </div>
+                  
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <h3 class="text-success">1,250</h3>
+                      <p class="text-muted mb-0">Điểm số</p>
+                    </div>
+                    <div class="col-4">
+                      <h3 class="text-success">42</h3>
+                      <p class="text-muted mb-0">Lần phân loại</p>
+                    </div>
+                    <div class="col-4">
+                      <h3 class="text-success">85%</h3>
+                      <p class="text-muted mb-0">Chính xác</p>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-4">
+                    <button class="btn btn-green btn-block py-2">
+                      <i class="fas fa-plus-circle mr-2"></i> Thêm hoạt động
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="email">Email liên hệ *</label>
-              <input type="email" class="form-control" id="email" placeholder="Email của bạn" required>
-              <div class="error-message" id="emailError"></div>
+          </div>
+          
+          <!-- Leaderboard -->
+          <div class="card challenge-card mb-5" data-aos="fade-up">
+            <div class="card-header bg-success text-white">
+              <h4 class="mb-0"><i class="fas fa-medal mr-2"></i> Bảng xếp hạng</h4>
             </div>
-
-            <div class="form-group">
-              <label for="message">Nội dung *</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Nhập lời nhắn..." required></textarea>
-              <div class="error-message" id="messageError"></div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th width="60">Hạng</th>
+                      <th>Thành viên</th>
+                      <th class="text-center">Điểm số</th>
+                      <th class="text-center">Hoạt động</th>
+                      <th class="text-center">Độ chính xác</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="leaderboard-item rank-1">
+                      <td><span class="badge badge-warning py-2 px-3">1</span></td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="">
+                          <div>
+                            <h6 class="mb-0">Trần Thị B</h6>
+                            <small class="text-muted">Đà Nẵng</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center font-weight-bold">3,450</td>
+                      <td class="text-center">128</td>
+                      <td class="text-center">
+                        <span class="badge badge-green">92%</span>
+                      </td>
+                    </tr>
+                    <tr class="leaderboard-item rank-2">
+                      <td><span class="badge badge-secondary py-2 px-3">2</span></td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="">
+                          <div>
+                            <h6 class="mb-0">Lê Văn C</h6>
+                            <small class="text-muted">Hà Nội</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center font-weight-bold">3,120</td>
+                      <td class="text-center">115</td>
+                      <td class="text-center">
+                        <span class="badge badge-green">89%</span>
+                      </td>
+                    </tr>
+                    <tr class="leaderboard-item rank-3">
+                      <td><span class="badge badge-danger py-2 px-3">3</span></td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="">
+                          <div>
+                            <h6 class="mb-0">Phạm Thị D</h6>
+                            <small class="text-muted">TP.HCM</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center font-weight-bold">2,980</td>
+                      <td class="text-center">104</td>
+                      <td class="text-center">
+                        <span class="badge badge-green">91%</span>
+                      </td>
+                    </tr>
+                    <!-- More rows... -->
+                    <tr class="leaderboard-item">
+                      <td>4</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="">
+                          <div>
+                            <h6 class="mb-0">Nguyễn Văn E</h6>
+                            <small class="text-muted">Hải Phòng</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center font-weight-bold">2,750</td>
+                      <td class="text-center">97</td>
+                      <td class="text-center">
+                        <span class="badge badge-green">88%</span>
+                      </td>
+                    </tr>
+                    <tr class="leaderboard-item">
+                      <td>5</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="">
+                          <div>
+                            <h6 class="mb-0">Hoàng Thị F</h6>
+                            <small class="text-muted">Cần Thơ</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center font-weight-bold">2,600</td>
+                      <td class="text-center">92</td>
+                      <td class="text-center">
+                        <span class="badge badge-green">87%</span>
+                      </td>
+                    </tr>
+                    <!-- User's row highlighted -->
+                    <tr class="leaderboard-item bg-light">
+                      <td>15</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="https://via.placeholder.com/40" class="rounded-circle mr-2" width="40" alt="">
+                          <div>
+                            <h6 class="mb-0">Nguyễn Văn A</h6>
+                            <small class="text-muted">Đà Nẵng</small>
+                            <span class="badge badge-success ml-2">Bạn</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="text-center font-weight-bold">1,250</td>
+                      <td class="text-center">42</td>
+                      <td class="text-center">
+                        <span class="badge badge-green">85%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Tiếp</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-
-            <button type="submit" class="btn btn-success">Gửi liên hệ</button>
-          </form>
-        </div>
-
-        <div class="col-md-6">
-          <div class="contact-info">
-            <h4>Thông tin liên hệ</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              123 Đường Xanh, TP. Đà Nẵng
-            </p>
-            <p>
-              <i class="fas fa-envelope"></i>
-              contact@wasteless.vn
-            </p>
-            <p>
-              <i class="fas fa-phone"></i>
-              0123 456 789
-            </p>
-            <p>
-              <i class="fas fa-clock"></i>
-              8:00 - 17:00 (T2 - T6)
-            </p>
+          </div>
+          
+          <!-- Challenge Form -->
+          <div class="card challenge-card" data-aos="fade-up">
+            <div class="card-header bg-success text-white">
+              <h4 class="mb-0"><i class="fas fa-plus-circle mr-2"></i> Thêm hoạt động phân loại</h4>
+            </div>
+            <div class="card-body">
+              <form id="challengeForm">
+                <div class="form-group">
+                  <label for="wasteType">Loại rác thải</label>
+                  <select class="form-control" id="wasteType" required>
+                    <option value="" selected disabled>Chọn loại rác thải</option>
+                    <option value="plastic">Nhựa tái chế (PET, HDPE...)</option>
+                    <option value="paper">Giấy, bìa carton</option>
+                    <option value="metal">Kim loại (nhôm, sắt...)</option>
+                    <option value="glass">Thủy tinh</option>
+                    <option value="organic">Rác hữu cơ</option>
+                    <option value="other">Khác (không tái chế)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="wasteAmount">Khối lượng (kg)</label>
+                  <input type="number" class="form-control" id="wasteAmount" min="0.1" step="0.1" placeholder="Ví dụ: 2.5" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="wastePhoto">Ảnh minh họa (tùy chọn)</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="wastePhoto">
+                    <label class="custom-file-label" for="wastePhoto">Chọn ảnh...</label>
+                  </div>
+                  <small class="form-text text-muted">Ảnh chụp rác thải trước khi phân loại</small>
+                </div>
+                
+                <div class="form-group">
+                  <label for="wasteLocation">Địa điểm phân loại</label>
+                  <select class="form-control" id="wasteLocation" required>
+                    <option value="" selected disabled>Chọn địa điểm</option>
+                    <option value="home">Tại nhà</option>
+                    <option value="office">Văn phòng/công ty</option>
+                    <option value="school">Trường học</option>
+                    <option value="public">Điểm công cộng</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="wasteNote">Ghi chú (tùy chọn)</label>
+                  <textarea class="form-control" id="wasteNote" rows="3" placeholder="Mô tả ngắn về rác thải hoặc quá trình phân loại..."></textarea>
+                </div>
+                
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="confirmCheck" required>
+                  <label class="form-check-label" for="confirmCheck">Tôi xác nhận thông tin trên là chính xác</label>
+                </div>
+                
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-green btn-lg px-5 py-2">
+                    <i class="fas fa-paper-plane mr-2"></i> Gửi báo cáo
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section-phone">
-    <div class="contact-wrapper">
-      <div class="contact-button" onclick="toggleMenu()">
-        <div class="pulse-ring"></div>
-        <i class="fas fa-comments"></i>
-      </div>
-      <div class="radial-menu" id="contactIcons">
-        <a href="tel:0123456789" target="_blank" class="contact-icon phone">
-          <img src="../assets/images/icons8-call-48.png" style="width: 28px; height: 28px" alt="" />
-        </a>
-        <a href="" target="_blank" class="contact-icon instagram">
-          <img src="../assets/images/icons8-instagram-48.png" style="width: 28px; height: 28px" alt="" />
-        </a>
-        <a href="https://zalo.me/0123456789" target="_blank" class="contact-icon zalo">
-          <img src="../assets/images/icons8-zalo-48.png" style="width: 28px; height: 28px" alt="" />
-        </a>
-        <a href="https://facebook.com/wasteless" target="_blank" class="contact-icon facebook">
-          <img src="../assets/images/icons8-fb-48.png" style="width: 28px; height: 28px" alt="" />
-        </a>
-      </div>
-    </div>
-  </div>
+  <!-- Footer -->
+ <div class="footer"></div>
+ 
+<iframe src="../../Waste Less/pages/botChat.html" style="position: fixed; bottom: 0; right: 0; width: 800px; height: 700px; border: none; z-index: 1000;"></iframe>
 
-  <div class="footer"></div>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Reset previous errors
-      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-      document.querySelectorAll('.form-control').forEach(el => el.classList.remove('error'));
-
-      let isValid = true;
-      const name = document.getElementById('name');
-      const email = document.getElementById('email');
-      const message = document.getElementById('message');
-
-      // Validate name
-      if (!name.value.trim()) {
-        document.getElementById('nameError').textContent = 'Vui lòng nhập họ và tên';
-        name.classList.add('error');
-        isValid = false;
-      }
-
-      // Validate email
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!email.value.trim()) {
-        document.getElementById('emailError').textContent = 'Vui lòng nhập email';
-        email.classList.add('error');
-        isValid = false;
-      } else if (!emailRegex.test(email.value)) {
-        document.getElementById('emailError').textContent = 'Email không hợp lệ';
-        email.classList.add('error');
-        isValid = false;
-      }
-
-      // Validate message
-      if (!message.value.trim()) {
-        document.getElementById('messageError').textContent = 'Vui lòng nhập nội dung';
-        message.classList.add('error');
-        isValid = false;
-      }
-
-      if (isValid) {
-        // Show success message
-        document.getElementById('successMessage').classList.add('show');
-
-        // Reset form
+    $(document).ready(function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+      
+      // File input label update
+      $('.custom-file-input').on('change', function() {
+        let fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+      });
+      
+      // Form submission
+      $('#challengeForm').on('submit', function(e) {
+        e.preventDefault();
+        // Here you would typically send the form data to your server
+        alert('Báo cáo của bạn đã được gửi thành công! Điểm số sẽ được cập nhật sau khi kiểm duyệt.');
         this.reset();
-
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          document.getElementById('successMessage').classList.remove('show');
-        }, 5000);
-      }
+        $('.custom-file-label').html('Chọn ảnh...');
+      });
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 </body>
-
 </html>

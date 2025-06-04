@@ -1,193 +1,392 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  
+
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/pagesCSS/guidance.css">
+
+
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link rel="stylesheet" href="../assets/css/reset.css" />
-    <link rel="stylesheet" href="../assets/css/base.css" />
-    <link rel="stylesheet" href="../assets/css/header.css" />
-    <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/pagesCSS/guidance.css" />
-    <script src="../layout/header.js" defer></script>
-    <script src="../layout/footer.js" defer></script>
-    <title>Guidance - Waste Less</title>
-    <link rel="icon" href="../assets/images/logo.png" type="image/png" />
-  </head>
-  <body>
-    <div class="header"></div>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <div class="section-guidance-banner">
-       <div class=" c-4">
-            <ul class="container-register pt-1">
-              <li><a href="#" id="header-login" onclick="openForm()">Đăng nhập</a></li>
-              <li>|</li>
-              <li><a href="#" id="header-register" onclick="openForm()">Đăng kí </a>
-              </li>
-            </ul>
 
-          </div>
-      <div class="container text-center pt-5 pb-5">
-        <h1>Hướng dẫn phân loại rác</h1>
-        <p>Những bước đơn giản để chung tay vì môi trường xanh - sạch - đẹp 🌱</p>
-      </div>
-    </div>
+  <title>Hướng dẫn phân loại rác chi tiết</title>
+  <script src="../layout/header.js" defer> </script>
+  <script src="../layout/footer.js" defer></script>
 
-    <div class="section-why-recycle">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+  
+</head>
+
+<body>
+  <div class="header"></div>
+
+  <main class="guide-page">
+    <!-- Hero Section -->
+    <section class="guide-hero">
       <div class="container">
+        <h1 class="display-4">Hướng dẫn phân loại rác toàn diện</h1>
+        <p class="lead">Mỗi loại rác cần được xử lý đúng cách để bảo vệ môi trường hiệu quả</p>
+        <div class="mt-4">
+          <a href="#basic-guide" class="btn btn-light mr-2">Hướng dẫn cơ bản</a>
+          <a href="#advanced" class="btn btn-outline-light">Mẹo nâng cao</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-light py-2">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Hướng dẫn phân loại</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Basic Guide Section -->
+    <section id="basic-guide" class="guide-categories py-5">
+      <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-trash-alt mr-2"></i>Phân loại rác cơ bản</h2>
+        
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle mr-2"></i>
+          <strong>Mẹo nhanh:</strong> Tải ứng dụng Waste Less để quét mã vạch sản phẩm và biết ngay cách phân loại!
+        </div>
+
+        <div class="category-tabs">
+          <button class="tab-btn active" data-category="recyclable">
+            <i class="fas fa-recycle mr-2"></i>Rác tái chế
+          </button>
+          <button class="tab-btn" data-category="organic">
+            <i class="fas fa-leaf mr-2"></i>Rác hữu cơ
+          </button>
+          <button class="tab-btn" data-category="hazardous">
+            <i class="fas fa-radiation-alt mr-2"></i>Rác nguy hại
+          </button>
+          <button class="tab-btn" data-category="other">
+            <i class="fas fa-trash mr-2"></i>Rác khác
+          </button>
+        </div>
+
+        <!-- Recyclable Waste -->
+        <div class="category-content active" id="recyclable">
+          <div class="row">
+            <div class="col-lg-8">
+              <h3><i class="fas fa-recycle text-success mr-2"></i>Rác tái chế là gì?</h3>
+              <p>Là các loại rác thải có thể được tái chế thành nguyên liệu hoặc sản phẩm mới, bao gồm:</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <h4 class="mt-4">✅ Nên bỏ vào thùng tái chế</h4>
+                  <ul class="item-list">
+                    <li><i class="fas fa-check-circle text-success mr-2"></i> Chai nhựa (PET, HDPE) đã rửa sạch</li>
+                    <li><i class="fas fa-check-circle text-success mr-2"></i> Lon nhôm, kim loại (nước ngọt, bia)</li>
+                    <li><i class="fas fa-check-circle text-success mr-2"></i> Giấy văn phòng, báo, tạp chí</li>
+                    <li><i class="fas fa-check-circle text-success mr-2"></i> Bìa carton (đã làm phẳng)</li>
+                    <li><i class="fas fa-check-circle text-success mr-2"></i> Chai lọ thủy tinh (không vỡ)</li>
+                    <li><i class="fas fa-check-circle text-success mr-2"></i> Hộp sữa giấy (đã xả sạch)</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h4 class="mt-4">❌ Không nên bỏ vào</h4>
+                  <ul class="item-list">
+                    <li><i class="fas fa-times-circle text-danger mr-2"></i> Nhựa không có ký hiệu tái chế</li>
+                    <li><i class="fas fa-times-circle text-danger mr-2"></i> Giấy dính thức ăn (hộp pizza bẩn)</li>
+                    <li><i class="fas fa-times-circle text-danger mr-2"></i> Ly giấy có lớp tráng nhựa</li>
+                    <li><i class="fas fa-times-circle text-danger mr-2"></i> Gương, kính cửa sổ</li>
+                    <li><i class="fas fa-times-circle text-danger mr-2"></i> Bao bì nhiều lớp (mì gói, snack)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h4 class="mt-4">Ký hiệu tái chế thường gặp</h4>
+              <div class="recycle-symbols">
+                <div class="symbol-card">
+                  <img src="../images/symbol-pet.png" alt="PET">
+                  <div>PET (số 1)</div>
+                  <small>Chai nước, nước ngọt</small>
+                </div>
+                <div class="symbol-card">
+                  <img src="../images/symbol-hdpe.png" alt="HDPE">
+                  <div>HDPE (số 2)</div>
+                  <small>Chai sữa, dầu gội</small>
+                </div>
+                <!-- Thêm các ký hiệu khác -->
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+              <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                  <h5 class="mb-0"><i class="fas fa-lightbulb mr-2"></i>Cách xử lý đúng</h5>
+                </div>
+                <div class="card-body">
+                  <ol class="step-list">
+                    <li>Rửa sạch (đối với hộp đựng thức ăn)</li>
+                    <li>Tháo rời các bộ phận (nắp chai, nhãn mác)</li>
+                    <li>Ép gọn để tiết kiệm không gian</li>
+                    <li>Phân loại theo chất liệu nếu có thể</li>
+                    <li>Bỏ vào thùng rác tái chế hoặc mang đến điểm thu gom</li>
+                  </ol>
+                  
+                  <div class="note-box mt-3">
+                    <h6><i class="fas fa-exclamation-triangle mr-2"></i>Lưu ý quan trọng:</h6>
+                    <p class="mb-0">Chai nhựa nên được đậy nắp khi tái chế để tránh bị lẫn vào rác thông thường trong quá trình thu gom.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card shadow-sm mt-4">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0"><i class="fas fa-map-marker-alt mr-2"></i>Điểm thu gom gần bạn</h5>
+                </div>
+                <div class="card-body">
+                  <p>Tìm thùng rác tái chế hoặc điểm thu gom tập trung:</p>
+                  <a href="../pages/statistics.html" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-map-marked-alt mr-2"></i>Mở bản đồ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organic Waste -->
+        <div class="category-content" id="organic">
+          <!-- Nội dung chi tiết tương tự cho rác hữu cơ -->
+          <div class="row">
+            <div class="col-md-6">
+              <h3><i class="fas fa-leaf text-success mr-2"></i>Rác hữu cơ là gì?</h3>
+              <p>Là các loại rác dễ phân hủy sinh học, có thể ủ làm phân compost:</p>
+              
+              <h4 class="mt-4">✅ Nên bỏ vào thùng rác hữu cơ</h4>
+              <ul class="item-list">
+                <li><i class="fas fa-check-circle text-success mr-2"></i> Thức ăn thừa (rau củ, thịt cá, cơm)</li>
+                <li><i class="fas fa-check-circle text-success mr-2"></i> Vỏ trái cây, rau củ</li>
+                <li><i class="fas fa-check-circle text-success mr-2"></i> Bã chè, bã cà phê</li>
+                <li><i class="fas fa-check-circle text-success mr-2"></i> Lá cây, cỏ khô</li>
+                <li><i class="fas fa-check-circle text-success mr-2"></i> Hoa quả hư hỏng</li>
+              </ul>
+              
+              <h4 class="mt-4">❌ Không nên bỏ vào</h4>
+              <ul class="item-list">
+                <li><i class="fas fa-times-circle text-danger mr-2"></i> Xương động vật lớn</li>
+                <li><i class="fas fa-times-circle text-danger mr-2"></i> Dầu mỡ đã qua sử dụng</li>
+                <li><i class="fas fa-times-circle text-danger mr-2"></i> Vỏ sò, ốc cứng</li>
+                <li><i class="fas fa-times-circle text-danger mr-2"></i> Túi nilon, bao bì nhựa</li>
+              </ul>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                  <h5 class="mb-0"><i class="fas fa-compost mr-2"></i>Hướng dẫn ủ phân tại nhà</h5>
+                </div>
+                <div class="card-body">
+                  <ol class="step-list">
+                    <li>Chuẩn bị thùng ủ có nắp đậy</li>
+                    <li>Phân loại rác hữu cơ khỏi các loại rác khác</li>
+                    <li>Cắt nhỏ rác hữu cơ (3-5cm) để nhanh phân hủy</li>
+                    <li>Trộn với mùn cưa hoặc lá khô theo tỷ lệ 2:1</li>
+                    <li>Đảo đều 2-3 lần/tuần</li>
+                    <li>Sau 2-3 tháng có thể sử dụng phân compost</li>
+                  </ol>
+                  
+                  <div class="note-box mt-3">
+                    <h6><i class="fas fa-tint mr-2"></i>Mẹo hay:</h6>
+                    <p class="mb-0">Thêm vỏ trứng nghiền nát vào phân ủ để bổ sung canxi cho cây trồng.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Các phần Hazardous và Other Waste tương tự -->
+      </div>
+    </section>
+
+    <!-- Advanced Tips Section -->
+    <section id="advanced" class="advanced-tips py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-graduation-cap mr-2"></i>Mẹo phân loại nâng cao</h2>
+        
         <div class="row">
-          <div class="col-md-6" data-aos="fade-right" data-aos-duration="800">
-            <img src="../assets/images/water-8100724_1280.jpg" class="img-fluid" alt="Why Recycle" />
+          <div class="col-md-6">
+            <div class="tip-card shadow-sm mb-4">
+              <div class="tip-header">
+                <i class="fas fa-shopping-bag"></i>
+                <h4>Giảm rác từ nguồn</h4>
+              </div>
+              <div class="tip-body">
+                <ul>
+                  <li>Sử dụng túi vải khi mua sắm</li>
+                  <li>Chọn sản phẩm có bao bì tối giản</li>
+                  <li>Mua số lượng lớn để giảm bao bì</li>
+                  <li>Ưu tiên sản phẩm có thể tái sử dụng</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
-            <h2>Tại sao cần phân loại?</h2>
-            <p>Phân loại rác giúp giảm thiểu ô nhiễm môi trường, tăng khả năng tái chế và bảo vệ tài nguyên thiên nhiên.</p>
-            <div class="counter" data-target="5000">0</div>
-            <p>kg rác đã được phân loại</p>
+          
+          <div class="col-md-6">
+            <div class="tip-card shadow-sm mb-4">
+              <div class="tip-header">
+                <i class="fas fa-utensils"></i>
+                <h4>Xử lý rác thực phẩm</h4>
+              </div>
+              <div class="tip-body">
+                <ul>
+                  <li>Lập kế hoạch bữa ăn để giảm thức ăn thừa</li>
+                  <li>Bảo quản thực phẩm đúng cách</li>
+                  <li>Tận dụng thức ăn thừa làm nguyên liệu mới</li>
+                  <li>Đông lạnh thực phẩm sắp hết hạn</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+        
+        <!-- Thêm nhiều mẹo khác -->
       </div>
-    </div>
+    </section>
 
-    <div class="section-waste-types">
+    <!-- Interactive Quiz Section -->
+    <section class="quiz-section py-5">
       <div class="container">
-        <h2 class="text-center">Các loại rác & biểu tượng</h2>
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <i class="fas fa-leaf"></i>
-            <h3>Rác hữu cơ</h3>
-            <p>Rác thải từ thực phẩm, rau củ quả.</p>
+        <h2 class="text-center mb-5"><i class="fas fa-question-circle mr-2"></i>Kiểm tra kiến thức của bạn</h2>
+        
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <p>1. Chai nhựa đựng nước ngọt sau khi dùng xong nên được xử lý thế nào?</p>
+            <div class="quiz-options">
+              <button class="quiz-option">Rửa sạch và bỏ vào thùng tái chế</button>
+              <button class="quiz-option">Bỏ vào thùng rác thường</button>
+              <button class="quiz-option">Vứt ra môi trường</button>
+            </div>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <i class="fas fa-recycle"></i>
-            <h3>Rác vô cơ tái chế</h3>
-            <p>Nhựa, giấy, kim loại có thể tái chế.</p>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <i class="fas fa-trash"></i>
-            <h3>Rác vô cơ không tái chế</h3>
-            <p>Rác thải không thể tái chế.</p>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <i class="fas fa-exclamation-triangle"></i>
-            <h3>Rác nguy hại</h3>
-            <p>Pin, bóng đèn, hóa chất.</p>
+          <!-- Thêm nhiều câu hỏi khác -->
+          
+          <div class="quiz-result mt-4 d-none">
+            <h4>Kết quả: <span id="score">0</span>/5</h4>
+            <p id="result-message"></p>
+            <button class="btn btn-primary" id="retry-btn">Làm lại</button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section-steps">
-      <div class="container">
-        <h2 class="text-center">Hướng dẫn từng bước</h2>
-        <div class="timeline">
-          <!-- Step 1 -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-point" data-bs-toggle="tooltip" data-bs-placement="right" title="Chuẩn bị dụng cụ">
-              <i class="fas fa-tools step-icon"></i>
-            </div>
-            <div class="timeline-content">
-              <h5>Bước 1: Chuẩn bị dụng cụ</h5>
-              <p>Chuẩn bị các thùng rác riêng biệt cho từng loại rác.</p>
-            </div>
-          </div>
-          <!-- Step 2 -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-point" data-bs-toggle="tooltip" data-bs-placement="right" title="Phân chia thùng rác">
-              <i class="fas fa-recycle step-icon"></i>
-            </div>
-            <div class="timeline-content">
-              <h5>Bước 2: Phân chia thùng rác</h5>
-              <p>Đặt các thùng rác ở vị trí thuận tiện trong nhà.</p>
+
+    <!-- Download Resources -->
+    <section class="download-section py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2><i class="fas fa-file-download mr-2"></i>Tài liệu hữu ích</h2>
+        <p class="lead">Tải về để tham khảo khi cần thiết</p>
+        
+        <div class="row mt-4">
+          <div class="col-md-4 mb-3">
+            <div class="download-card">
+              <i class="fas fa-file-pdf fa-3x mb-3"></i>
+              <h5>Cẩm nang phân loại rác</h5>
+              <p>PDF • 2.4MB</p>
+              <button class="btn btn-light btn-sm">Tải về</button>
             </div>
           </div>
-          <!-- Step 3 -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-point" data-bs-toggle="tooltip" data-bs-placement="right" title="Vứt đúng thùng">
-              <i class="fas fa-trash-alt step-icon"></i>
-            </div>
-            <div class="timeline-content">
-              <h5>Bước 3: Vứt đúng thùng</h5>
-              <p>Đảm bảo vứt rác vào đúng thùng tương ứng.</p>
+          
+          <div class="col-md-4 mb-3">
+            <div class="download-card">
+              <i class="fas fa-image fa-3x mb-3"></i>
+              <h5>Poster hướng dẫn</h5>
+              <p>JPG • 1.8MB</p>
+              <button class="btn btn-light btn-sm">Tải về</button>
             </div>
           </div>
-          <!-- Step 4 -->
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-point" data-bs-toggle="tooltip" data-bs-placement="right" title="Vệ sinh & tái chế tiếp theo">
-              <i class="fas fa-sync-alt step-icon"></i>
-            </div>
-            <div class="timeline-content">
-              <h5>Bước 4: Vệ sinh & tái chế tiếp theo</h5>
-              <p>Vệ sinh thùng rác định kỳ và tái chế rác thải.</p>
+          
+          <div class="col-md-4 mb-3">
+            <div class="download-card">
+              <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+              <h5>Ứng dụng Waste Less</h5>
+              <p>Android & iOS</p>
+              <button class="btn btn-light btn-sm">Tải ứng dụng</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+  </main>
+    <iframe src="../../Waste Less/pages/botChat.html" style="position: fixed; bottom: 0; right: 0; width: 800px; height: 700px; border: none; z-index: 1000;"></iframe>
 
-    <div class="section-benefits">
-      <div class="container">
-        <h2 class="text-center">Lợi ích đạt được</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="counter" data-target="1000">0</div>
-            <p>kg rác hữu cơ tái chế</p>
-          </div>
-          <div class="col-md-3">
-            <div class="counter" data-target="500">0</div>
-            <p>chai nhựa tái chế</p>
-          </div>
-          <div class="col-md-3">
-            <div class="counter" data-target="200">0</div>
-            <p>hộ gia đình tham gia</p>
-          </div>
-          <div class="col-md-3">
-            <div class="counter" data-target="1000">0</div>
-            <p>lượt chia sẻ hướng dẫn</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="footer"></div>
 
-    <div class="section-cta text-center pt-5 pb-5">
-      <a href="guidance.pdf" class="btn btn-warning fs-5">Tải bản PDF hướng dẫn</a>
-      <a href="app-link" class="btn btn-success fs-5 ml-3">Tải App Waste Less</a>
-    </div>
+  <script>
+    // Xử lý tab phân loại rác
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Xóa active từ tất cả các tab
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        // Thêm active cho tab được click
+        this.classList.add('active');
+        
+        // Ẩn tất cả nội dung
+        document.querySelectorAll('.category-content').forEach(content => {
+          content.classList.remove('active');
+        });
+        
+        // Hiển thị nội dung tương ứng
+        const categoryId = this.getAttribute('data-category');
+        document.getElementById(categoryId).classList.add('active');
+      });
+    });
+    
+    // Xử lý quiz tương tác
+    document.querySelectorAll('.quiz-option').forEach(option => {
+      option.addEventListener('click', function() {
+        // Kiểm tra câu trả lời
+        if (this.textContent.includes("Rửa sạch")) {
+          this.style.backgroundColor = '#4CAF50';
+          this.style.color = 'white';
+        } else {
+          this.style.backgroundColor = '#f44336';
+          this.style.color = 'white';
+        }
+        
+        // Hiển thị kết quả sau khi trả lời hết
+        // (Code xử lý đầy đủ cần thêm)
+      });
+    });
+    
+    // Xử lý nút làm lại quiz
+    document.getElementById('retry-btn')?.addEventListener('click', function() {
+      location.reload();
+    });
+  </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
 
-
-    <div class="section-faq">
-      <div class="container">
-        <h2 class="text-center">Câu hỏi thường gặp</h2>
-        <div class="accordion" id="faqAccordion">
-          <div class="card">
-            <div class="card-header">
-              <h3>Rác hữu cơ để bao lâu được phân huỷ?</h3>
-            </div>
-            <div class="card-body">
-              <p>Rác hữu cơ thường phân huỷ trong khoảng 2-3 tuần tùy thuộc vào điều kiện môi trường.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h3>Thu gom pin cũ thế nào?</h3>
-            </div>
-            <div class="card-body">
-              <p>Pin cũ nên được thu gom tại các điểm thu gom pin thải bỏ hoặc gửi đến các trung tâm tái chế.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer"></div>
-    <script>
+      <script>
     fetch('../layout/login.html')
       .then(response => response.text())
       .then(data => {
@@ -197,54 +396,7 @@
         document.body.appendChild(script);
       });
   </script>
-  <script>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const counters = document.querySelectorAll(".counter");
 
-      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-
-      const animateCount = (counter, duration = 2000) => {
-        const target = +counter.getAttribute("data-target");
-        let start = 0;
-        const startTime = performance.now();
-
-        const updateCounter = (currentTime) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easedProgress = easeOut(progress);
-          const value = Math.floor(easedProgress * target);
-
-          counter.textContent = value.toLocaleString();
-
-          // Thêm dấu cộng nếu chưa có
-          if (!counter.textContent.includes('+')) {
-            counter.textContent += '+';
-          }
-
-          if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.textContent = value.toLocaleString() + '+';
-          }
-        };
-
-        requestAnimationFrame(updateCounter);
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.6 });
-
-      counters.forEach(counter => {
-        observer.observe(counter);
-      });
-    });
-  </script>
-  </body>
+</body>
 </html>

@@ -18,11 +18,6 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 
-
-
-
-
-
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/header.css">
@@ -33,7 +28,9 @@
 
   <script src="layout/header.js" defer> </script>
   <script src="layout/footer.js" defer></script>
+  
 
+ 
   <title>Waste Less</title>
   <link rel="icon" href="assets/images/logo.png" type="image/png">
 
@@ -42,28 +39,21 @@
 <body>
 
   <div class="header"></div>
+  
 
 
   <div class="section-one">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div class="inner-wrap">
+          <div class="inner-wrap px-5 ml-2">
             <h1>WASTE LESS - VÌ MỘT MÔI TRƯỜNG XANH SẠCH ĐẸP</h1>
           </div>
-          <div class="inner-button">
+          <div class="inner-button ml-4">
             <a href="index.html" class="button button-two">Tham gia cùng chúng tôi</a>
             <a href="pages/statistics.html" class="button button-two-outline">Waste Map</a>
           </div>
-          <div class=" c-4">
-            <ul class="container-register pt-1">
-              <li><a href="#" id="header-login" onclick="openForm()">Đăng nhập</a></li>
-              <li>|</li>
-              <li><a href="#" id="header-register" onclick="openForm()">Đăng kí </a>
-              </li>
-            </ul>
-
-          </div>
+        
         </div>
       </div>
     </div>
@@ -73,7 +63,9 @@
     <div class="container pb-3 pt-3">
       <div class="inner-wrap pb-5">
         <div class="inner-title mt-5" data-aos="fade-up" data-aos-duration="800">
-          <h2>Kết quả của chúng tôi</h2>
+          <h2>Kết quả của chúng tôi </h2>
+<span ><i class="fa-solid fa-key" style="color:red"></i></span>
+
           
         </div>
 
@@ -126,14 +118,15 @@
       </div>
     </div>
   </div>
+
+
 <div class="section-four bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Vấn đề & Giải pháp</h2>
     
-    <!-- Vấn đề 1 -->
     <div class="problem-card left-aligned" data-aos="fade-right">
       <div class="card-image">
-        <img src="assets/images/rac_thai_sinh_hoa.jpg" alt="Rác thải">
+        <img src="assets/images/f4_1.jpeg" alt="Rác thải">
       </div>
       <div class="card-content">
         <div class="problem-tag">Vấn đề</div>
@@ -142,7 +135,6 @@
       </div>
     </div>
 
-    <!-- Vấn đề 2 (đảo ngược) -->
     <div class="problem-card right-aligned" data-aos="fade-left">
       <div class="card-content">
         <div class="problem-tag">Vấn đề</div>
@@ -150,11 +142,10 @@
         <p>Nhiều người dân chưa có thói quen phân loại rác, gây khó khăn cho xử lý và tăng gánh nặng môi trường.</p>
       </div>
       <div class="card-image">
-        <img src="assets/images/tai_che_rac.jpg" alt="Phân loại rác">
+        <img src="assets/images/f4_2.jpeg" alt="Phân loại rác">
       </div>
     </div>
 
-    <!-- Giải pháp (Full-width) -->
     <div class="solution-box" data-aos="zoom-in">
       <div class="solution-icon">♻️</div>
       <h3 class="text-white">Giải pháp từ WasteLess</h3>
@@ -448,27 +439,7 @@
 
 
 
-  <div class="section-phone">
-    <div class="contact-wrapper">
-      <div class="contact-button" onclick="toggleMenu()">
-        <div class="pulse-ring"></div>
-        <i class="fas fa-comments"></i>
-      </div>
 
-      <div class="radial-menu" id="contactIcons">
-        <a href="tel:0123456789" target="_blank" class="contact-icon phone"><img src="assets/images/icons8-call-48.png"
-            width: 28px; height: 28px;" alt=""></a>
-        <a href="https://zalo.me/0787540572" target="_blank" class="contact-icon zalo"><img
-            src="assets/images/icons8-zalo-48.png" style="width: 28px; height: 28px;" alt=""></a>
-        <a href="https://instagram.com" target="_blank" class="contact-icon insta"><img src="assets/images/chat.png"
-            style="width: 28px; height: 28px;" alt=""></a>
-        <a href="https://www.facebook.com/?rdid=KVdEmFszcOsrfVTC" target="_blank" class="contact-icon fb"><img
-            src="assets/images/icons8-fb-48.png" style="width: 28px; height: 28px;" alt=""></a>
-      </div>
-    </div>
-
-
-  </div>
 
   <div id="auth-form-container"></div>
 
@@ -648,9 +619,10 @@
   </div>
 
 
-
+<!-- <iframe src="../Waste Less/pages/botChat.html" style="position: fixed; bottom: 0; right: 0; width: 400px; height: 700px; border: none; z-index: 1000;"></iframe> -->
 
   <div class="footer"></div>
+   <iframe src="../../Waste Less/pages/botChat.html" style="position: fixed; bottom: 0; right: 0; width: 200px; height: 200px; border: none; z-index: 1000;"></iframe>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -665,7 +637,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
 
-
   <script>
     fetch('layout/login.html')
       .then(response => response.text())
@@ -675,6 +646,7 @@
         script.src = 'assets/js/index.js';
         document.body.appendChild(script);
       });
+      
   </script>
   <script>//SECTION-ONE
     // document.addEventListener('scroll', function () {

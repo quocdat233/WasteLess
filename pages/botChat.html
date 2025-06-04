@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot tích hợp</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/botChat.css">
+</head>
+<body>
+  <div class="section-phone">
+    <div class="contact-wrapper">
+      <div class="contact-button" onclick="toggleMenu()">
+        <div class="pulse-ring"></div>
+        <i class="fas fa-comments"></i>
+      </div>
+
+      <div class="radial-menu" id="contactIcons">
+        <a href="tel:0123456789" target="_blank" class="contact-icon phone"><img src="../assets/images/icons8-call-48.png" style="width: 28px; height: 28px;" alt=""></a>
+        <a href="https://zalo.me/0787540572" target="_blank" class="contact-icon zalo"><img src="../assets/images/icons8-zalo-48.png" style="width: 28px; height: 28px;" alt=""></a>
+        <a onclick="toggleChatbot()" class="contact-icon insta"><img src="../assets/images/chat.png" style="width: 28px; height: 28px;" alt=""></a>
+        <a href="https://www.facebook.com/?rdid=KVdEmFszcOsrfVTC" target="_blank" class="contact-icon fb"><img src="../assets/images/icons8-fb-48.png" style="width: 28px; height: 28px;" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Container -->
+  <div id="chatbot-container" class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>Chatbot hỗ trợ</h3>
+      <button id="close-chatbot" class="close-btn"><i class="fas fa-times"></i></button>
+    </div>
+    
+    <div id="chatbot-messages" class="chatbot-messages">
+      <div class="bot-message">Xin chào! Tôi có thể giúp gì cho bạn?</div>
+    </div>
+    
+    <div class="chatbot-input">
+      <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn...">
+      <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <script src="../assets/js/botChat.js"></script>
+</body>
+</html>

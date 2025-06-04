@@ -35,8 +35,9 @@
   <script src="../layout/header.js" defer> </script>
   <script src="../layout/footer.js" defer></script>
 
-  <title>Waste Less - Cộng đồng</title>
   <link rel="icon" href="../assets/images/logo.png" type="image/png">
+  <title>Waste Less - Cộng đồng</title>
+
 
 </head>
 
@@ -46,17 +47,9 @@
   <main class="community-page">
     <!-- Hero Banner -->
     <section class="community-hero">
-            <div class=" c-4">
-            <ul class="container-register pt-1">
-              <li><a href="#" id="header-login" onclick="openForm()">Đăng nhập</a></li>
-              <li>|</li>
-              <li><a href="#" id="header-register" onclick="openForm()">Đăng kí </a>
-              </li>
-            </ul>
-
-          </div>
+           
       <div class="hero-content">
-        <h1>Cộng đồng WasteLess</h1>
+        <h1>Cộng đồng Waste Less</h1>
         <p class="subtitle">Cùng nhau thay đổi vì một Việt Nam xanh sạch đẹp</p>
         <div class="hero-stats">
           <div class="stat-item">
@@ -384,18 +377,20 @@
   </main>
 
   <footer class="footer"></footer>
+<iframe src="../../Waste Less/pages/botChat.html" style="position: fixed; bottom: 0; right: 0; width: 400px; height: 700px; border: none; z-index: 1000;"></iframe>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 
       <script>
-    fetch('layout/login.html')
+    fetch('../layout/login.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('auth-form-container').innerHTML = data;
         const script = document.createElement('script');
-        script.src = 'assets/js/index.js';
+        script.src = '../assets/js/index.js';
         document.body.appendChild(script);
       });
   </script>
