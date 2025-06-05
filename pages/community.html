@@ -377,7 +377,40 @@
   </main>
 
   <footer class="footer"></footer>
-   <iframe src="botChat.html" style="position: fixed; bottom: 0; right: 0; width: 200px; height: 200px; border: none; z-index: 1000;"></iframe>
+ 
+  <iframe id="chatbotIframe" src="botChat.html" 
+          style="position: fixed; bottom: 0; right: 0; width: 180px; height: 180px; border: none; z-index: 1000;">
+  </iframe>
+ <script>
+    const iframe = document.getElementById('chatbotIframe');
+
+
+
+
+window.addEventListener('message', (event) => {
+  if (event.data.action === 'chatbotVisible') {
+    if (event.data.visible) {
+      iframe.style.width = '420px';
+      iframe.style.height = '570px';
+      iframe.style.pointerEvents = 'auto';
+    } else {
+      iframe.style.width = '60px';
+      iframe.style.height = '60px';
+      iframe.style.pointerEvents = 'auto';
+    }
+  }
+});
+
+
+  window.addEventListener('click', (e) => {
+    const rect = iframe.getBoundingClientRect();
+    const isOutside = e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom;
+    if (isOutside) {
+      iframe.contentWindow.postMessage({ action: 'closeChatbot' }, '*');
+    }
+  });
+</script>
+
 
 
 
