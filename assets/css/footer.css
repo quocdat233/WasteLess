@@ -287,11 +287,13 @@
 
   }
   .social {
-    font-size: 18px;
+    font-size: 23px;
     padding-top: 13px;
     padding-bottom: 13px;
   }
-  
+   .social .inner-social li i{
+    font-size: 25px;
+   }
   
    .inner-logoo{
     padding-bottom: 20px;
@@ -356,7 +358,7 @@ font-size: 20px;
     font-size: 1.35rem; /* 20px */
     margin-bottom: 18px;
   }
-  
+
   .footer p, 
   .footer a, 
   .footer li {
@@ -390,6 +392,15 @@ font-size: 20px;
   .inner-bottom {
     font-size: 0.875rem; /* 14px */
   }
+      .social {
+    font-size: 21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+   .social .inner-social li i{
+    font-size: 22px;
+   }
+  
 }
 
 /* Mobile Portrait (up to 576px) */
@@ -442,7 +453,7 @@ font-size: 20px;
   }
   
   .inner-logoo {
-    margin-left: 13px;
+    margin-left: 6%;
   }
   
   .inner-logoo img {
@@ -456,6 +467,16 @@ font-size: 20px;
   .inner-bottom {
     font-size: 0.75rem; /* 12px */
   }
+        .social {
+    font-size: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2%;
+  }
+   .social .inner-social li i{
+    font-size: 20px;
+   }
+  
   
   /* Special adjustments for very small phones */
   @media (max-width: 360px) {
