@@ -429,6 +429,9 @@ justify-content: center;
 .header__menu.active .header__menu__body--content ul li:nth-child(5) {
     transition-delay: 0.5s;
 }
+.header__menu.active .header__menu__body--content ul li:nth-child(6) {
+    transition-delay: 0.5s;
+}
 
 /* ===== RESPONSIVE STYLES ===== */
 
