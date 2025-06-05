@@ -1482,31 +1482,31 @@ i.regit {
      overflow: hidden;
 
 
-}
+   }
   .section-result .inner-info  {
     max-width: 35%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-}
+   }
 
    
    .section-result .inner-wrap .inner-content .inner-info h1,
-.section-result .inner-wrap .inner-content .inner-info h1 {
+   .section-result .inner-wrap .inner-content .inner-info h1 {
     font-weight: 700;
     font-size: 38px;
-}
-.section-result .inner-wrap .inner-content .inner-info h2,
-.section-result .inner-wrap .inner-content .inner-info h2 {
+ }
+ .section-result .inner-wrap .inner-content .inner-info h2,
+ .section-result .inner-wrap .inner-content .inner-info h2 {
     font-weight:600;
     font-size: 20px;
     
-}
-.section-result .inner-wrap .inner-content .inner-info p{
+ }
+ .section-result .inner-wrap .inner-content .inner-info p{
     color: #383434;
     font-size: 17px;
-}
-.overlay-text {
+ }
+ .overlay-text {
     position: absolute;
     top: 0px;
     left: 0;
@@ -1906,25 +1906,23 @@ i.regit {
         margin-top: 0.5rem !important;
     }
     
-    .section-result .container {
-        margin: 0 15px !important;
-        padding: 0 !important;
-    }
-    
+ 
     .section-result .inner-info > div {
-        width: 100% !important;
+        width: 180% !important;
         text-align: left;
-        padding: 1rem !important;
     }
     
-    .section-result .inner-info > div:not(:last-child)::after {
-        left: 5% !important;
-        right: 5% !important;
-    }
-    
-    .inner-result, .inner-tree, .inner-member, .inner-share {
-        padding: 0 !important;
-    }
+     .section-result .inner-info > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left:0%;  /* tràn ra bên trái */
+  right: -40%  ; /* tràn ra bên phải */
+  bottom: 0;
+  height: 1px;
+  background-color: #b7b3b3;
+  z-index: 1;
+}
+ 
     
     .section-result .inner-wrap .inner-content .inner-info h1 {
         font-size: 32px !important;
@@ -1942,7 +1940,12 @@ i.regit {
         width: 100% !important;
         height: auto !important;
     }
-
+    .section-result .inner-content{
+      gap: 40px !important;
+    }
+        .section-result .inner-info > div {
+          margin-bottom:0px ;
+        }
 
 
     
@@ -2078,6 +2081,10 @@ i.regit {
         position: relative;
         z-index: 2;
         margin-bottom: 0.5rem;
+    }
+     .section-result .inner-wrap .inner-content .inner-img {
+        width: 90% !important;
+        height: auto !important;
     }
 
   }
