@@ -634,8 +634,8 @@
 <script>
   fetch('layout/botchat.html')
     .then(response => response.text())
-    .then(html => {
-      document.getElementById('contact-widget-placeholder').innerHTML = html;
+    .then(data => {
+      document.getElementById('contact-widget-placeholder').innerHTML = data;
 
       const script = document.createElement('script');
       script.src = 'assets/js/botChat.js';
