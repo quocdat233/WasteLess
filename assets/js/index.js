@@ -186,13 +186,13 @@ const initialTop = container.offsetTop;
   }
 
 
-//ĐÓNG FORM//
+
+
 function openForm() {
     const form = document.querySelector('.form');
     const registerBtn = document.getElementById('header-register');
     const loginBtn = document.getElementById('header-login');
-
-    registerBtn.addEventListener('click', () => {
+      registerBtn.addEventListener('click', () => {
         container.classList.add("active");
     });
 
@@ -200,12 +200,22 @@ function openForm() {
         container.classList.remove("active");
     });
 
+
+    // Căn giữa thủ công trước khi hiện
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const formWidth = form.offsetWidth;
+    const formHeight = form.offsetHeight;
+
+    form.style.left = (windowWidth - formWidth) / 2 + 'px';
+    form.style.top = (windowHeight - formHeight) / 2 + 'px';
+
     form.style.display = "block";
     form.classList.add('show');
 
-    // Đóng khi click ra ngoài form
     document.addEventListener('click', handleOutsideClick);
 }
+
 
 function closeForm() {
     const form = document.querySelector('.form');

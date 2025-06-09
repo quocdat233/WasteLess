@@ -102,3 +102,35 @@ window.addEventListener('message', (event) => {
     chatbotContainer.classList.remove('active');
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Xác định prefix theo folder hiện tại
+  const currentPath = window.location.pathname;
+  const isInPages = currentPath.includes("/pages/");
+  const prefix = isInPages ? "../" : "";
+
+  // Map class contact-icon -> file ảnh (tương ứng với class của <a>)
+  const iconSrcMap = {
+    phone: "assets/images/icons8-call-48.png",
+    zalo: "assets/images/icons8-zalo-48.png",
+    insta: "assets/images/chat.png",
+    fb: "assets/images/icons8-fb-48.png"
+  };
+
+  // Duyệt tất cả các a.contact-icon trong radial menu
+  const contactIcons = document.querySelectorAll("#contactIcons a.contact-icon");
+
+  contactIcons.forEach(icon => {
+    const classList = icon.classList;
+    // Tìm class nào khớp với key trong iconSrcMap
+    for (const key in iconSrcMap) {
+      if (classList.contains(key)) {
+        const img = icon.querySelector("img");
+        if (img) {
+          img.src = prefix + iconSrcMap[key];
+        }
+        break;
+      }
+    }
+  });
+});
