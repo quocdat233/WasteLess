@@ -632,13 +632,13 @@
 
 
 <script>
-  fetch("pages/botchat.html")
+  fetch('layout/botchat.html')
     .then(response => response.text())
     .then(html => {
-      document.getElementById("contact-widget-placeholder").innerHTML = html;
+      document.getElementById('contact-widget-placeholder').innerHTML = html;
 
       const script = document.createElement('script');
-      script.src = "/assets/js/botChat.js";
+      script.src = 'assets/js/botChat.js';
       document.body.appendChild(script);
     });
 </script>
